@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortZap - A Revolução da Portaria Inteligente via WhatsApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+        }
+
+        .gradient-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+
+        .phone-mockup {
+            background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5), 0 30px 60px -30px rgba(0, 0, 0, 0.5);
+        }
+
+        .phone-screen {
+            background: linear-gradient(180deg, #0b141a 0%, #0b141a 100%);
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .whatsapp-bubble {
+            background: #005c4b;
+            border-radius: 8px 8px 8px 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .pulse-green {
+            animation: pulseGreen 2s infinite;
+        }
+
+        @keyframes pulseGreen {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+        }
+
+        .glow-text {
+            text-shadow: 0 0 40px rgba(37, 211, 102, 0.3);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(37, 211, 102, 0.25);
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-white">
+
+    <!-- Hero Section -->
+    <section class="gradient-hero min-h-screen relative overflow-hidden flex flex-col">
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="relative z-10 container mx-auto px-4 md:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <img src="Logo PortZap fundo redondo.png" alt="PortZap Logo"
+                        class="h-12 md:h-14 w-auto rounded-xl shadow-lg border border-white/10">
+                    <div
+                        class="hidden sm:inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-4 py-1.5">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="text-green-400 text-xs md:text-sm font-medium">🚀 A nova era das portarias
+                            inteligentes</span>
+                    </div>
+                </div>
+                <a href="#planos"
+                    class="px-5 md:px-8 py-2 md:py-3 border border-green-400/50 rounded-full text-green-400 hover:bg-green-400 hover:text-slate-900 transition-all font-semibold text-sm md:text-base">
+                    Ver Planos
+                </a>
+            </div>
+        </nav>
+
+        <div class="relative z-10 container mx-auto px-4 md:px-6 flex-1 flex items-center max-w-7xl pb-4">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+                <!-- Text Content -->
+                <div class="space-y-6 lg:space-y-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        <span class="text-green-500">Você já conhece o <br> PortZap?</span>
+                        <br>
+                        <span class="text-white text-2xl md:text-3xl lg:text-4xl font-bold mt-4 block leading-snug">
+                            A revolução que transforma o <span class="text-white">WhatsApp</span> da sua portaria em uma
+                        </span>
+                        <span class="text-green-400 text-2xl md:text-3xl lg:text-4xl font-bold block mt-2">
+                            Central de Segurança Inteligente.
+                        </span>
+                    </h1>
+
+
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5551985710749?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20conhecer%20o%20PortZap%20para%20o%20meu%20condomínio.%20Pode%20me%20passar%20mais%20informações?"
+                            target="_blank"
+                            class="bg-green-500 px-6 py-3 rounded-full text-lg font-semibold text-white hover:bg-green-600 transition-all text-center flex items-center justify-center gap-2 shadow-lg shadow-green-500/20">
+                            <span>Quero testar no meu condomínio</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                        <a href="#como-funciona"
+                            class="px-6 py-3 rounded-full text-lg font-medium border border-slate-600 hover:border-green-400 text-white transition-all text-center">
+                            Como funciona?
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-6 pt-4">
+                        <div class="flex items-center gap-2 text-slate-400">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">100% na nuvem</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-400">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Setup em 24h</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-slate-400">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Suporte dedicado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Mockup Hero -->
+                <div class="hidden lg:flex justify-end pr-4 xl:pr-10">
+                    <div
+                        class="phone-mockup float-animation w-72 bg-slate-900 border-slate-800 rounded-[2.5rem] p-3 shadow-2xl border-4">
+                        <div
+                            class="phone-screen rounded-[2rem] overflow-hidden bg-[#0b141a] h-[450px] flex flex-col relative font-sans">
+                            <!-- WhatsApp Header -->
+                            <div
+                                class="bg-[#1f2c33] px-4 py-3 flex items-center gap-3 z-10 shadow-sm border-b border-[#2a3942]">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+                                    P</div>
+                                <div>
+                                    <p class="font-semibold text-white text-sm">Portaria Central</p>
+                                    <p class="text-[10px] text-green-400 font-medium">online</p>
+                                </div>
+                            </div>
+
+                            <!-- Messages Area -->
+                            <div class="flex-1 p-4 space-y-4 relative">
+                                <!-- Background Pattern Opacity -->
+                                <div class="absolute inset-0 opacity-5 pointer-events-none"
+                                    style="background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');">
+                                </div>
+
+                                <!-- Date Bubble -->
+                                <div
+                                    class="bg-[#1f2c33] px-3 py-1 rounded-lg self-center text-center w-fit mx-auto mb-4 shadow-sm border border-[#2a3942]/50 relative z-10">
+                                    <p class="text-[10px] text-slate-300 font-medium uppercase tracking-wide">Hoje</p>
+                                </div>
+
+                                <!-- Message Bubble -->
+                                <div
+                                    class="whatsapp-bubble bg-[#005c4b] p-3 rounded-lg rounded-tl-none max-w-[95%] shadow-md relative z-10">
+                                    <p
+                                        class="text-white text-[12px] leading-snug font-bold mb-2 flex items-center gap-2 border-b border-white/10 pb-2">
+                                        <span>📦</span> PORTARIA - ENCOMENDA
+                                    </p>
+                                    <p class="text-white text-[13px] leading-relaxed mb-3">
+                                        Olá! Chegou uma encomenda para você.
+                                    </p>
+                                    <div class="bg-black/20 rounded p-2 mb-1">
+                                        <p class="text-white/90 text-[11px] space-y-1 font-mono">
+                                            <span class="block">📌 <strong>ID:</strong> ENT231024-001</span>
+                                            <span class="block">🛍️ <strong>De:</strong> Amazon</span>
+                                            <span class="block">📍 <strong>Destino:</strong> Torre 1 - Apto 101</span>
+                                            <span class="block">🕐 <strong>Chegada:</strong> 14:30</span>
+                                        </p>
+                                    </div>
+                                    <div class="flex justify-end gap-1 mt-1 items-center">
+                                        <span class="text-[10px] text-white/60">14:30</span>
+                                        <span class="text-blue-400 text-[10px]">✓✓</span>
+                                    </div>
+
+                                    <!-- Triangle for bubble -->
+                                    <div
+                                        class="absolute top-0 -left-2 w-0 h-0 border-t-[10px] border-t-[#005c4b] border-l-[10px] border-l-transparent">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                    fill="#0f172a" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Section: O que o morador recebe -->
+    <section class="bg-slate-900 py-24 lg:min-h-screen lg:flex lg:items-center" id="prova-real">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-green-400 font-semibold text-sm uppercase tracking-wider">A Prova Real</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">O que o seu morador recebe</h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                    Veja exatamente as mensagens automáticas que o PortZap envia. <strong
+                        class="text-white">Profissionalismo instantâneo.</strong>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Phone 1 - Encomenda -->
+                <div class="scroll-reveal" style="transition-delay: 0.1s;">
+                    <div class="text-center mb-6">
+                        <div
+                            class="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full">
+                            <span class="text-xl">📦</span>
+                            <span class="font-semibold">Chegou Encomenda</span>
+                        </div>
+                    </div>
+                    <div class="phone-mockup mx-auto max-w-[280px]">
+                        <div class="phone-screen p-2">
+                            <div class="bg-[#1f2c33] px-3 py-2 flex items-center gap-2 rounded-t-2xl">
+                                <img src="Logo PortZap fundo redondo.png" alt="PortZap" class="w-8 h-8 rounded-full">
+                                <div>
+                                    <p class="font-semibold text-white text-xs">Portaria Central</p>
+                                    <p class="text-[10px] text-green-400">online</p>
+                                </div>
+                            </div>
+                            <div class="bg-[#0b141a] px-3 py-4 min-h-[280px]">
+                                <div class="whatsapp-bubble p-3" style="animation-delay: 0.5s;">
+                                    <p class="text-white text-xs leading-relaxed">
+                                        📦 <strong>PORTARIA - ENCOMENDA</strong><br><br>
+                                        Olá! Chegou uma encomenda para você.<br><br>
+                                        🔖 ID: ENT231024-001<br>
+                                        🏪 De: Amazon<br>
+                                        📍 Destino: Torre 1 - Apto 101<br>
+                                        🕐 Chegada: 14:30<br><br>
+                                        Aguardamos sua retirada na portaria.
+                                    </p>
+                                    <p class="text-[10px] text-slate-400 text-right mt-2">14:30 ✓✓</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone 2 - iFood -->
+                <div class="scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="text-center mb-6">
+                        <div class="inline-flex items-center gap-2 bg-red-500/10 text-red-400 px-4 py-2 rounded-full">
+                            <span class="text-xl">🍕</span>
+                            <span class="font-semibold">Chegou iFood/Delivery</span>
+                        </div>
+                    </div>
+                    <div class="phone-mockup mx-auto max-w-[280px]">
+                        <div class="phone-screen p-2">
+                            <div class="bg-[#1f2c33] px-3 py-2 flex items-center gap-2 rounded-t-2xl">
+                                <img src="Logo PortZap fundo redondo.png" alt="PortZap" class="w-8 h-8 rounded-full">
+                                <div>
+                                    <p class="font-semibold text-white text-xs">Portaria Central</p>
+                                    <p class="text-[10px] text-green-400">online</p>
+                                </div>
+                            </div>
+                            <div class="bg-[#0b141a] px-3 py-4 min-h-[280px]">
+                                <div class="whatsapp-bubble p-3" style="animation-delay: 0.7s;">
+                                    <p class="text-white text-xs leading-relaxed">
+                                        <strong>PORTARIA - TELE ENTREGA</strong> 🍕<br><br>
+                                        Olá! Chegou uma tele da(o) iFood para você! 🫵😉<br><br>
+                                        👤 Entregador(a): Carlos Silva<br>
+                                        🛵 Veículo: Honda Fan Vermelha (ABC-1234)<br>
+                                        📍 Destino: Torre 2 - Apto 504<br><br>
+                                        Podemos autorizar a entrada do(a) entregador(a) até a sua torre? 🤓
+                                    </p>
+                                    <p class="text-[10px] text-slate-400 text-right mt-2">19:45 ✓✓</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone 3 - Visita -->
+                <div class="scroll-reveal" style="transition-delay: 0.3s;">
+                    <div class="text-center mb-6">
+                        <div class="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full">
+                            <span class="text-xl">🏢</span>
+                            <span class="font-semibold">Chegou Visita</span>
+                        </div>
+                    </div>
+                    <div class="phone-mockup mx-auto max-w-[280px]">
+                        <div class="phone-screen p-2">
+                            <div class="bg-[#1f2c33] px-3 py-2 flex items-center gap-2 rounded-t-2xl">
+                                <img src="Logo PortZap fundo redondo.png" alt="PortZap" class="w-8 h-8 rounded-full">
+                                <div>
+                                    <p class="font-semibold text-white text-xs">Portaria Central</p>
+                                    <p class="text-[10px] text-green-400">online</p>
+                                </div>
+                            </div>
+                            <div class="bg-[#0b141a] px-3 py-4 min-h-[280px]">
+                                <div class="whatsapp-bubble p-3" style="animation-delay: 0.9s;">
+                                    <p class="text-white text-xs leading-relaxed">
+                                        🏢 <strong>PORTARIA - VISITA</strong><br><br>
+                                        Olá! Há uma visita na portaria.<br><br>
+                                        👤 Visitante: Maria Oliveira<br>
+                                        📍 Destino: Torre 3 - Apto 202<br>
+                                        🕐 Entrada: 10:15<br><br>
+                                        Por favor, confirme a entrada.
+                                    </p>
+                                    <p class="text-[10px] text-slate-400 text-right mt-2">10:15 ✓✓</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16 scroll-reveal">
+                <p class="text-slate-400 text-lg">
+                    💡 <span class="text-white font-medium">Tudo automático.</span> O porteiro só cadastra e o morador
+                    recebe na hora.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Como Funciona -->
+    <section class="bg-slate-800/50 py-24 lg:min-h-screen lg:flex lg:items-center" id="como-funciona">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-green-400 font-semibold text-sm uppercase tracking-wider">O Ecossistema</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Como Funciona na Prática</h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                    Uma estrutura simples e poderosa que transforma sua portaria em um <strong class="text-white">centro
+                        de operações profissional.</strong>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 card-hover transition-all scroll-reveal"
+                    style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sistema Web</h3>
+                    <p class="text-slate-400">Roda direto no navegador (Chrome/Edge). Sem instalação de software pesado.
+                        Acesse de qualquer computador.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 card-hover transition-all scroll-reveal"
+                    style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">WhatsApp Desktop</h3>
+                    <p class="text-slate-400">Integração fluida com WhatsApp Web. O porteiro usa o PC para enviar
+                        mensagens, áudios e até fazer ligações.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 card-hover transition-all scroll-reveal"
+                    style="transition-delay: 0.3s;">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Headset Profissional</h3>
+                    <p class="text-slate-400">Recomendamos um headset (tipo Plantronics). Mãos livres para digitar ou
+                        manusear pacotes enquanto fala. <strong class="text-white">Adeus telefone fixo!</strong></p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 card-hover transition-all scroll-reveal"
+                    style="transition-delay: 0.4s;">
+                    <div class="w-14 h-14 bg-amber-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Impressora de Etiquetas</h3>
+                    <p class="text-slate-400"><span class="text-amber-400 font-medium">Opcional:</span> Conecte uma
+                        térmica (Brother/Zebra) e imprima etiquetas na hora. <strong class="text-white">Acabou a caixa
+                            perdida!</strong></p>
+                </div>
+            </div>
+
+            <!-- Workflow Visual -->
+            <div
+                class="mt-16 bg-gradient-to-r from-slate-800 to-slate-800/50 rounded-3xl p-8 border border-slate-700 max-w-4xl mx-auto scroll-reveal">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-3xl">📦</span>
+                        </div>
+                        <p class="font-semibold">Encomenda chega</p>
+                    </div>
+                    <svg class="w-8 h-8 text-slate-600 rotate-90 md:rotate-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-3xl">💻</span>
+                        </div>
+                        <p class="font-semibold">Porteiro cadastra</p>
+                    </div>
+                    <svg class="w-8 h-8 text-slate-600 rotate-90 md:rotate-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-3xl">📱</span>
+                        </div>
+                        <p class="font-semibold">Morador recebe</p>
+                    </div>
+                    <svg class="w-8 h-8 text-slate-600 rotate-90 md:rotate-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-3xl">✅</span>
+                        </div>
+                        <p class="font-semibold">Tudo registrado!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Ligação Automática -->
+    <section class="bg-slate-900 py-24 relative overflow-hidden lg:min-h-screen lg:flex lg:items-center">
+        <div class="absolute inset-0">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-green-500/5 rounded-full blur-3xl">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="scroll-reveal">
+                        <div
+                            class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 px-4 py-2 rounded-full mb-6">
+                            <span class="text-xl">📞</span>
+                            <span class="font-semibold">Inclusividade Total</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                            "E quem <span class="text-green-400">não tem</span> WhatsApp?"
+                        </h2>
+                        <p class="text-xl text-slate-300 mb-6">
+                            O PortZap <strong class="text-white">não deixa ninguém de fora.</strong>
+                        </p>
+                        <p class="text-lg text-slate-400 leading-relaxed">
+                            Para moradores sem smartphone ou idosos, o sistema <strong class="text-white">automatiza uma
+                                ligação</strong> para o telefone fixo ou celular cadastrado. Para portarias que já
+                            possuem um celular com linha, basta usar o próprio aparelho para realizar as chamadas de
+                            forma simples e direta.
+                        </p>
+                        <div class="mt-8 p-4 bg-slate-800/80 rounded-xl border border-slate-700">
+                            <p class="text-slate-300 italic">
+                                🔊 "Olá! Aqui é a portaria do condomínio. Chegou uma encomenda da Amazon para a unidade
+                                101. Por favor, retire na portaria. Obrigado!"
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-3 text-slate-400">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Ideal para quem já tem celular na portaria</span>
+                        </div>
+                    </div>
+
+                    <div class="scroll-reveal" style="transition-delay: 0.2s;">
+                        <div class="relative">
+                            <div
+                                class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-slate-700">
+                                <div class="text-center">
+                                    <div
+                                        class="w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+                                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-2">Ligação Automática</h3>
+                                    <p class="text-slate-400">Ligando para (51) 9****-4567...</p>
+                                    <div class="mt-6 flex justify-center gap-1">
+                                        <div class="w-2 h-8 bg-green-400 rounded-full animate-pulse"></div>
+                                        <div class="w-2 h-12 bg-green-400 rounded-full animate-pulse"
+                                            style="animation-delay: 0.1s;"></div>
+                                        <div class="w-2 h-6 bg-green-400 rounded-full animate-pulse"
+                                            style="animation-delay: 0.2s;"></div>
+                                        <div class="w-2 h-10 bg-green-400 rounded-full animate-pulse"
+                                            style="animation-delay: 0.3s;"></div>
+                                        <div class="w-2 h-8 bg-green-400 rounded-full animate-pulse"
+                                            style="animation-delay: 0.4s;"></div>
+                                        <div class="w-2 h-14 bg-green-400 rounded-full animate-pulse"
+                                            style="animation-delay: 0.5s;"></div>
+                                        <div class="w-2 h-6 bg-green-400 rounded-full animate-pulse"
+                                            style="animation-delay: 0.6s;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute -bottom-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                                ✓ Ninguém fica de fora
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Infraestrutura -->
+    <section class="bg-slate-800/50 py-24 lg:min-h-screen lg:flex lg:items-center">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-green-400 font-semibold text-sm uppercase tracking-wider">Custo Baixo</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Infraestrutura Necessária</h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                    Esqueça servidores caros. O banco de dados já está <strong class="text-white">incluso no serviço
+                        (SaaS)</strong>. Você só precisa do básico:
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div
+                    class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 border border-slate-700 scroll-reveal">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                            <div
+                                class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">1 Computador com Internet</h3>
+                                <p class="text-slate-400">Qualquer PC ou notebook com navegador atualizado. Não precisa
+                                    ser potente.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                            <div
+                                class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">WhatsApp Desktop / Web</h3>
+                                <p class="text-slate-400">Vinculado ao número oficial da portaria. Gratuito e já
+                                    conhecido por todos.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-slate-800/50 rounded-xl border border-green-500/30">
+                            <div
+                                class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Headset Profissional <span
+                                        class="text-green-400 text-sm">(Recomendado)</span></h3>
+                                <p class="text-slate-400">Para áudios e chamadas com as mãos livres. Tipo Plantronics,
+                                    Jabra ou similar.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                            <div
+                                class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">1 Celular com Linha</h3>
+                                <p class="text-slate-400">Para fazer ligações para moradores que não têm WhatsApp. Use o
+                                    celular que a portaria já possui!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-green-500/10 rounded-2xl border border-green-500/30">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-green-400">Banco de Dados na Nuvem</h3>
+                                <p class="text-slate-300">Já está incluso no plano! Backup automático, seguro e
+                                    acessível de qualquer lugar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Planos -->
+    <section class="bg-slate-900 py-24 lg:min-h-screen lg:flex lg:items-center" id="planos">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-green-400 font-semibold text-sm uppercase tracking-wider">Invista na
+                    Organização</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Planos e Preços</h2>
+                <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+                    Modelo de assinatura mensal. <strong class="text-white">Sem surpresas, sem taxas
+                        escondidas.</strong>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plano Essencial -->
+                <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 card-hover transition-all scroll-reveal"
+                    style="transition-delay: 0.1s;">
+                    <div class="text-center mb-8">
+                        <span class="text-slate-400 font-medium">Pequeno Porte</span>
+                        <h3 class="text-2xl font-bold mt-2">Plano Essencial</h3>
+                        <p class="text-slate-500 mt-1">Até 50 unidades</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-bold">R$ 189</span>
+                        <span class="text-slate-400">/mês</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Banco de dados incluso</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Notificações WhatsApp</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Controle de encomendas</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Gestão de visitas</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Suporte por email</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20Essencial%20do%20PortZap%20para%20o%20meu%20condomínio.%20Pode%20me%20passar%20mais%20informações?"
+                        target="_blank"
+                        class="block w-full py-4 text-center border border-green-400/50 text-green-400 rounded-full font-semibold hover:bg-green-400 hover:text-slate-900 transition-all">
+                        Começar agora
+                    </a>
+                </div>
+
+                <!-- Plano Profissional -->
+                <div class="bg-gradient-to-b from-green-900/50 to-slate-800 rounded-3xl p-8 border-2 border-green-500 card-hover transition-all relative scroll-reveal"
+                    style="transition-delay: 0.2s;">
+                    <div
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+                        MAIS POPULAR
+                    </div>
+                    <div class="text-center mb-8">
+                        <span class="text-green-400 font-medium">Médio Porte</span>
+                        <h3 class="text-2xl font-bold mt-2">Plano Profissional</h3>
+                        <p class="text-slate-400 mt-1">Até 150 unidades</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <span class="text-5xl font-bold text-green-400">R$ 289</span>
+                        <span class="text-slate-400">/mês</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Tudo do Essencial</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-white font-medium">📞 Ligação Automática</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Para quem não tem WhatsApp</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Relatórios avançados</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Suporte prioritário</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20Profissional%20do%20PortZap%20para%20o%20meu%20condomínio.%20Pode%20me%20passar%20mais%20informações?"
+                        target="_blank"
+                        class="block w-full py-4 text-center gradient-whatsapp text-white rounded-full font-semibold hover:opacity-90 transition-all">
+                        Escolher Profissional
+                    </a>
+                </div>
+
+                <!-- Plano Enterprise -->
+                <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 card-hover transition-all scroll-reveal"
+                    style="transition-delay: 0.3s;">
+                    <div class="text-center mb-8">
+                        <span class="text-slate-400 font-medium">Grande Porte</span>
+                        <h3 class="text-2xl font-bold mt-2">Plano Enterprise</h3>
+                        <p class="text-slate-500 mt-1">Grandes complexos</p>
+                    </div>
+                    <div class="text-center mb-8">
+                        <span class="text-3xl font-bold">Sob Consulta</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Tudo do Profissional</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Múltiplas portarias</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">API personalizada</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">Gerente de conta</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300">SLA garantido</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20Enterprise%20do%20PortZap%20para%20um%20grande%20condomínio.%20Gostaria%20de%20falar%20com%20um%20consultor."
+                        target="_blank"
+                        class="block w-full py-4 text-center border border-slate-600 text-slate-300 rounded-full font-semibold hover:border-green-400 hover:text-green-400 transition-all">
+                        Falar com consultor
+                    </a>
+                </div>
+            </div>
+
+            <!-- Setup Fee -->
+            <div class="max-w-2xl mx-auto mt-12 text-center scroll-reveal">
+                <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="text-left">
+                                <p class="font-bold text-lg">Taxa de Setup: <span class="text-amber-400">R$
+                                        497,00</span></p>
+                                <p class="text-slate-400 text-sm">Configuração + Importação de Moradores + Treinamento
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: FAQ -->
+    <section class="bg-slate-800/50 py-24 lg:min-h-screen lg:flex lg:items-center" id="faq">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-green-400 font-semibold text-sm uppercase tracking-wider">Tire suas dúvidas</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden scroll-reveal"
+                    style="transition-delay: 0.1s;">
+                    <button class="faq-button w-full p-6 text-left flex items-center justify-between"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Como funciona o backup dos dados?</span>
+                        <svg class="w-6 h-6 text-green-400 transition-transform faq-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-slate-400">O backup é <strong class="text-white">100% automático</strong> e
+                            acontece em tempo real na nuvem. Todos os registros de encomendas, visitas e entregas ficam
+                            armazenados com segurança. Você pode acessar o histórico a qualquer momento, de qualquer
+                            lugar.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden scroll-reveal"
+                    style="transition-delay: 0.15s;">
+                    <button class="faq-button w-full p-6 text-left flex items-center justify-between"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Meus dados estão seguros?</span>
+                        <svg class="w-6 h-6 text-green-400 transition-transform faq-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-slate-400">Absolutamente! Utilizamos <strong class="text-white">criptografia de
+                                ponta a ponta</strong> e servidores seguros. Seus dados e os dos moradores são
+                            protegidos seguindo as melhores práticas de segurança e conformidade com a LGPD.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden scroll-reveal"
+                    style="transition-delay: 0.2s;">
+                    <button class="faq-button w-full p-6 text-left flex items-center justify-between"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Como funciona o suporte?</span>
+                        <svg class="w-6 h-6 text-green-400 transition-transform faq-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-slate-400">Oferecemos suporte via <strong class="text-white">email e
+                                WhatsApp</strong>. No plano Profissional, você tem atendimento prioritário. No
+                            Enterprise, conta com um gerente de conta dedicado para resolver qualquer questão
+                            rapidamente.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden scroll-reveal"
+                    style="transition-delay: 0.25s;">
+                    <button class="faq-button w-full p-6 text-left flex items-center justify-between"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Preciso instalar algum software?</span>
+                        <svg class="w-6 h-6 text-green-400 transition-transform faq-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-slate-400">O PortZap roda <strong class="text-white">100% no navegador</strong>
+                            (Chrome, Edge, Firefox). Basta acessar com login e senha. O ideal é ter o <strong
+                                class="text-green-400">WhatsApp Desktop</strong> instalado no computador — ele é <strong
+                                class="text-white">gratuito</strong> e oferece a melhor experiência para envio de
+                            mensagens, áudios e até ligações diretamente pelo PC.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden scroll-reveal"
+                    style="transition-delay: 0.3s;">
+                    <button class="faq-button w-full p-6 text-left flex items-center justify-between"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-lg">Quanto tempo leva para implementar?</span>
+                        <svg class="w-6 h-6 text-green-400 transition-transform faq-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6">
+                        <p class="text-slate-400">Em média, <strong class="text-white">24 a 48 horas</strong> após o
+                            envio da lista de moradores. Fazemos toda a configuração, importamos os dados e treinamos a
+                            equipe da portaria. Rápido e sem dor de cabeça!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="bg-gradient-to-r from-green-900/50 to-emerald-900/50 py-24 lg:min-h-screen lg:flex lg:items-center"
+        id="contato">
+        <div class="container mx-auto px-6 text-center scroll-reveal">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Pronto para <span class="text-green-400">profissionalizar</span> sua portaria?
+            </h2>
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+                Junte-se aos condomínios que já descobriram o segredo da organização. <strong class="text-white">Fale
+                    conosco agora!</strong>
+            </p>
+            <a href="https://wa.me/5551985710749?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20conhecer%20o%20PortZap%20para%20o%20meu%20condomínio.%20Pode%20me%20passar%20mais%20informações?"
+                target="_blank"
+                class="inline-flex items-center gap-3 gradient-whatsapp px-10 py-5 rounded-full text-xl font-semibold text-white hover:opacity-90 transition-all pulse-green">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                </svg>
+                Quero testar no meu condomínio
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="Logo PortZap fundo redondo.png" alt="PortZap Logo" class="h-16 w-auto rounded-xl">
+                </div>
+                <div class="flex items-center gap-6 text-slate-400 text-sm">
+                    <a href="#" class="hover:text-green-400 transition-colors">Termos de Uso</a>
+                    <a href="#" class="hover:text-green-400 transition-colors">Política de Privacidade</a>
+                    <a href="#" class="hover:text-green-400 transition-colors">Suporte</a>
+                </div>
+                <p class="text-slate-500 text-sm">
+                    © 2024 PortZap. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Scroll Reveal Animation
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.scroll-reveal');
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('revealed');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate WhatsApp bubbles on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bubbles = entry.target.querySelectorAll('.whatsapp-bubble');
+                    bubbles.forEach((bubble, index) => {
+                        bubble.style.animationDelay = `${0.3 + (index * 0.2)}s`;
+                        bubble.style.opacity = '1';
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.phone-mockup').forEach(phone => {
+            observer.observe(phone);
+        });
+    </script>
+</body>
+
+</html>
