@@ -190,8 +190,8 @@
                             Você já conhece o <br class="hidden md:block" /> PortZap?
                         </h1>
 
-                        <p
-                            class="text-xl md:text-2xl lg:text-3xl text-slate-300 font-medium leading-relaxed max-w-xl min-h-[8rem] md:min-h-[6rem]">
+                        <p class="text-xl md:text-2xl lg:text-3xl text-slate-300 font-medium leading-relaxed max-w-xl min-h-[9rem] md:min-h-[7rem]"
+                            id="hero-typewriter-container">
                             <span id="hero-typewriter"></span><span class="typewriter-cursor"></span>
                         </p>
                     </div>
@@ -1308,11 +1308,12 @@
 
         // Typewriter Effect
         const typewriterElement = document.getElementById('hero-typewriter');
+        const cursorElement = document.querySelector('.typewriter-cursor');
         const textToType = [
             { text: "A revolução que transforma o ", class: "" },
             { text: "WhatsApp", class: "text-white font-bold" },
             { text: " da sua portaria em uma ", class: "" },
-            { text: "Central de Segurança Inteligente.", class: "text-green-400 font-extrabold block mt-2 text-2xl md:text-3xl lg:text-4xl" }
+            { text: "Central de Segurança Inteligente.", class: "text-green-400 font-extrabold block mt-3 text-2xl md:text-3xl lg:text-4xl" }
         ];
 
         let partIndex = 0;
@@ -1332,25 +1333,36 @@
                         });
                     }
                     typewriterElement.appendChild(partSpan);
+
+                    // Move cursor to the end of the new part if it's a block
+                    if (currentPart.class && currentPart.class.includes('block')) {
+                        partSpan.appendChild(cursorElement);
+                    }
                 }
 
                 if (charIndex < currentPart.text.length) {
-                    partSpan.textContent += currentPart.text[charIndex];
+                    // Update content but keep cursor at the end if it's inside
+                    if (partSpan.contains(cursorElement)) {
+                        const textNode = partSpan.childNodes[0] || partSpan.appendChild(document.createTextNode(''));
+                        textNode.textContent += currentPart.text[charIndex];
+                    } else {
+                        partSpan.textContent += currentPart.text[charIndex];
+                    }
                     charIndex++;
-                    setTimeout(type, 40);
+                    setTimeout(type, 35);
                 } else {
                     partIndex++;
                     charIndex = 0;
-                    setTimeout(type, 600);
+                    setTimeout(type, 500);
                 }
             } else {
                 setTimeout(() => {
-                    document.querySelector('.typewriter-cursor').style.display = 'none';
+                    cursorElement.style.opacity = '0';
                 }, 1000);
             }
         }
 
-        setTimeout(type, 1200);
+        setTimeout(type, 1000);
     </script>
 </body>
 
