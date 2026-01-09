@@ -142,16 +142,20 @@
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
                 <!-- Text Content -->
                 <div class="space-y-6 lg:space-y-8">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                        <span class="text-green-500">Você já conhece o <br> PortZap?</span>
-                        <br>
-                        <span class="text-white text-2xl md:text-3xl lg:text-4xl font-bold mt-4 block leading-snug">
-                            A revolução que transforma o <span class="text-white">WhatsApp</span> da sua portaria em uma
-                        </span>
-                        <span class="text-green-400 text-2xl md:text-3xl lg:text-4xl font-bold block mt-2">
-                            Central de Segurança Inteligente.
-                        </span>
-                    </h1>
+                    <div class="flex flex-col gap-6">
+                        <h1
+                            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-green-500 leading-tight tracking-tight">
+                            Você já conhece o <br class="hidden md:block" /> PortZap?
+                        </h1>
+
+                        <p class="text-xl md:text-2xl lg:text-3xl text-slate-300 font-medium leading-relaxed max-w-xl">
+                            A revolução que transforma o <strong class="text-white font-bold">WhatsApp</strong> da sua
+                            portaria em uma
+                            <span class="text-green-400 font-extrabold block mt-2 text-2xl md:text-3xl lg:text-4xl">
+                                Central de Segurança Inteligente.
+                            </span>
+                        </p>
+                    </div>
 
 
 
@@ -1071,6 +1075,17 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <img src="Logo PortZap fundo redondo.png" alt="PortZap Logo" class="h-16 w-auto rounded-xl">
+                <p class="text-slate-500 text-sm">
+                    © 2024 PortZap. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
 
 
     <script>
@@ -1091,17 +1106,11 @@
                 const elementTop = element.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
 
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('revealed');
-                }
+                if (elementTop < windowHeight - 100) { element.classList.add('revealed'); }
             });
-        }
-
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        } window.addEventListener('scroll',
+            revealOnScroll); window.addEventListener('load', revealOnScroll); // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#" ]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
