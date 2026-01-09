@@ -742,225 +742,290 @@
     <!-- Section: Planos -->
     <section class="bg-slate-900 py-24 lg:min-h-screen lg:flex lg:items-center" id="planos">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
-                <span class="text-green-400 font-semibold text-sm uppercase tracking-wider">Invista na
-                    Organização</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Planos e Preços</h2>
+            <div class="text-center mb-12 scroll-reveal text-center mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">
+                    A solução definitiva para a <span class="text-green-500">segurança <br class="hidden md:block"> e
+                        gestão</span> do seu condomínio.
+                </h2>
                 <p class="text-xl text-slate-400 max-w-2xl mx-auto">
-                    Modelo de assinatura mensal. <strong class="text-white">Sem surpresas, sem taxas
-                        escondidas.</strong>
+                    Escolha o plano ideal para o tamanho da sua operação e profissionalize seu controle de acesso hoje
+                    mesmo.
                 </p>
+
+                <!-- Billing Toggle -->
+                <div class="mt-8 flex items-center justify-center gap-4">
+                    <span class="text-slate-400 font-medium">Mensal</span>
+                    <button id="billing-toggle"
+                        class="relative w-14 h-7 bg-slate-700 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <div class="absolute top-1 left-1 w-5 h-5 bg-green-500 rounded-full transition-transform duration-200"
+                            id="toggle-knob"></div>
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <span class="text-slate-400 font-medium">Anual</span>
+                        <span
+                            class="bg-green-500/10 text-green-400 text-xs font-bold px-2 py-1 rounded-full border border-green-500/20">2
+                            Meses Grátis</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Plano Essencial -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+                <!-- Plano Start -->
                 <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 card-hover transition-all scroll-reveal flex flex-col"
                     style="transition-delay: 0.1s;">
-                    <div class="text-center mb-8">
-                        <span class="text-slate-400 font-medium">Pequeno Porte</span>
-                        <h3 class="text-2xl font-bold mt-2">Plano Essencial</h3>
-                        <p class="text-slate-500 mt-1">Até 50 unidades</p>
+                    <div class="mb-8">
+                        <span class="text-green-500 font-bold uppercase tracking-wider text-sm">START</span>
+                        <p class="text-slate-400 text-sm mt-1">Foco: Prédios Pequenos e Vilas</p>
                     </div>
-                    <div class="text-center mb-8">
-                        <span class="text-5xl font-bold">R$ 189</span>
-                        <span class="text-slate-400">/mês</span>
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-3xl font-bold">R$</span>
+                            <span class="text-6xl font-black billing-price" data-monthly="149"
+                                data-annual="124">149</span>
+                            <span class="text-slate-400 font-medium">/mês</span>
+                        </div>
+                        <p class="text-slate-500 text-xs mt-2 italic billing-text">* Cobrado mensalmente</p>
                     </div>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Banco de dados incluso</span>
+                            <span class="text-slate-300 text-sm font-semibold">Até 50 Unidades</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Notificações WhatsApp</span>
+                            <span class="text-slate-400 text-sm">Registro ilimitado de visitantes e veículos</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Controle de encomendas</span>
+                            <span class="text-slate-400 text-sm">Controle de Encomendas e Delivery</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Gestão de visitas</span>
+                            <span class="text-slate-300 text-sm">Notificações WhatsApp (templates padrão)</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Suporte por email</span>
+                            <span class="text-slate-400 text-sm">Acesso para até 3 Porteiros</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-400 text-sm">Histórico de 30 dias</span>
                         </li>
                     </ul>
-                    <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20Essencial%20do%20PortZap%20para%20o%20meu%20condomínio.%20Pode%20me%20passar%20mais%20informações?"
-                        target="_blank"
-                        class="block w-full py-4 text-center border border-green-400/50 text-green-400 rounded-full font-semibold hover:bg-green-400 hover:text-slate-900 transition-all mt-auto">
-                        Começar agora
-                    </a>
+                    <div class="mt-auto">
+                        <p class="text-slate-500 text-center text-xs mb-4">Taxa de implantação: R$ 200,00</p>
+                        <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20START%20do%20PortZap."
+                            target="_blank"
+                            class="block w-full py-4 text-center border border-green-500 text-green-500 rounded-full font-bold hover:bg-green-500 hover:text-slate-900 transition-all">
+                            Começar agora
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Plano Profissional -->
-                <div class="bg-gradient-to-b from-green-900/50 to-slate-800 rounded-3xl p-8 border-2 border-green-500 card-hover transition-all relative scroll-reveal flex flex-col"
+                <!-- Plano Professional -->
+                <div class="bg-gradient-to-b from-green-900/40 to-slate-800 rounded-3xl p-8 border-2 border-green-500 card-hover transition-all relative scroll-reveal flex flex-col scale-105 shadow-2xl shadow-green-500/10"
                     style="transition-delay: 0.2s;">
                     <div
-                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-                        MAIS POPULAR
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-slate-900 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest whitespace-nowrap">
+                        BEST SELLER
                     </div>
-                    <div class="text-center mb-8">
-                        <span class="text-green-400 font-medium">Médio Porte</span>
-                        <h3 class="text-2xl font-bold mt-2">Plano Profissional</h3>
-                        <p class="text-slate-400 mt-1">Até 150 unidades</p>
+                    <div class="mb-8">
+                        <span class="text-green-400 font-bold uppercase tracking-wider text-sm">PROFESSIONAL</span>
+                        <p class="text-slate-300 text-sm mt-1">Foco: Condomínios Médios</p>
                     </div>
-                    <div class="text-center mb-8">
-                        <span class="text-5xl font-bold text-green-400">R$ 289</span>
-                        <span class="text-slate-400">/mês</span>
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-3xl font-bold text-green-400">R$</span>
+                            <span class="text-6xl font-black billing-price text-green-400" data-monthly="349"
+                                data-annual="291">349</span>
+                            <span class="text-slate-300 font-medium">/mês</span>
+                        </div>
+                        <p class="text-slate-400 text-xs mt-2 italic billing-text">* Cobrado mensalmente</p>
                     </div>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Tudo do Essencial</span>
+                            <span class="text-white text-sm font-bold">Até 200 Unidades</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-white font-medium">📞 Ligação Automática</span>
+                            <span class="text-white text-sm font-bold">Tudo do Start +</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Para quem não tem WhatsApp</span>
+                            <span class="text-slate-300 text-sm">Gestão de Agendamentos</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Relatórios avançados</span>
+                            <span class="text-slate-300 text-sm">Envios de Avisos Gerais (Massa)</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Suporte prioritário</span>
+                            <span class="text-slate-300 text-sm">Customização total de WhatsApp</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300 text-sm">Porteiros ilimitados</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300 text-sm">Histórico 90 dias (LGPD)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300 text-sm">Dashboard Gerencial para o Síndico</span>
                         </li>
                     </ul>
-                    <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20Profissional%20do%20PortZap%20para%20o%20meu%20condomínio.%20Pode%20me%20passar%20mais%20informações?"
-                        target="_blank"
-                        class="block w-full py-4 text-center gradient-whatsapp text-white rounded-full font-semibold hover:opacity-90 transition-all mt-auto">
-                        Escolher Profissional
-                    </a>
+                    <div class="mt-auto">
+                        <p class="text-slate-400 text-center text-xs mb-4">Taxa de implantação: R$ 200,00</p>
+                        <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20PROFESSIONAL%20do%20PortZap."
+                            target="_blank"
+                            class="block w-content py-4 text-center gradient-whatsapp text-white rounded-full font-black text-lg hover:shadow-xl hover:shadow-green-500/20 transition-all">
+                            Escolher Plano
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Plano Enterprise -->
+                <!-- Plano Elite -->
                 <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700 card-hover transition-all scroll-reveal flex flex-col"
                     style="transition-delay: 0.3s;">
-                    <div class="text-center mb-8">
-                        <span class="text-slate-400 font-medium">Grande Porte</span>
-                        <h3 class="text-2xl font-bold mt-2">Plano Enterprise</h3>
-                        <p class="text-slate-500 mt-1">Grandes complexos</p>
+                    <div class="mb-8">
+                        <span class="text-green-500 font-bold uppercase tracking-wider text-sm">ELITE</span>
+                        <p class="text-slate-400 text-sm mt-1">Grandes Complexos e Clubes</p>
                     </div>
-                    <div class="text-center mb-8">
-                        <span class="text-3xl font-bold">Sob Consulta</span>
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-3xl font-bold">R$</span>
+                            <span class="text-6xl font-black billing-price" data-monthly="599"
+                                data-annual="499">599</span>
+                            <span class="text-slate-400 font-medium">/mês</span>
+                        </div>
+                        <p class="text-slate-500 text-xs mt-2 italic billing-text">* Cobrado mensalmente</p>
                     </div>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Tudo do Profissional</span>
+                            <span class="text-slate-300 text-sm font-bold">Unidades Ilimitadas</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Múltiplas portarias</span>
+                            <span class="text-slate-300 text-sm font-bold">Tudo do Professional +</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">API personalizada</span>
+                            <span class="text-slate-300 text-sm">Suporte Prioritário (WhatsApp Direto)</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">Gerente de conta</span>
+                            <span class="text-slate-300 text-sm">Exportação avançada (Excel/PDF)</span>
                         </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span class="text-slate-300">SLA garantido</span>
+                            <span class="text-slate-300 text-sm">Treinamento remoto da equipe</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300 text-sm">Histórico Vitalício</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-green-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-slate-300 text-sm font-semibold">Importação de dados pela nossa
+                                equipe</span>
                         </li>
                     </ul>
-                    <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20Enterprise%20do%20PortZap%20para%20um%20grande%20condomínio.%20Gostaria%20de%20falar%20com%20um%20consultor."
-                        target="_blank"
-                        class="block w-full py-4 text-center border border-slate-600 text-slate-300 rounded-full font-semibold hover:border-green-400 hover:text-green-400 transition-all mt-auto">
-                        Falar com consultor
-                    </a>
-                </div>
-            </div>
-
-            <!-- Setup Fee -->
-            <div class="max-w-2xl mx-auto mt-12 text-center scroll-reveal">
-                <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
-                    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center">
-                                <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </div>
-                            <div class="text-left">
-                                <p class="font-bold text-lg">Taxa de Setup: <span class="text-amber-400">R$
-                                        497,00</span></p>
-                                <p class="text-slate-400 text-sm">Configuração + Importação de Moradores + Treinamento
-                                </p>
-                            </div>
-                        </div>
+                    <div class="mt-auto">
+                        <p
+                            class="text-green-400 text-center text-xs font-bold mb-4 uppercase tracking-widest leading-loose">
+                            Taxa de implantação GRÁTIS</p>
+                        <a href="https://wa.me/5551985710749?text=Olá!%20Tenho%20interesse%20no%20Plano%20ELITE%20do%20PortZap."
+                            target="_blank"
+                            class="block w-full py-4 text-center border border-slate-600 text-slate-300 rounded-full font-bold hover:border-green-400 hover:text-green-400 transition-all mt-auto">
+                            Falar com consultor
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1159,6 +1224,26 @@
 
         document.querySelectorAll('.phone-mockup').forEach(phone => {
             observer.observe(phone);
+        });
+
+        // Billing Toggle Logic
+        document.getElementById('billing-toggle').addEventListener('click', function () {
+            const knob = document.getElementById('toggle-knob');
+            const prices = document.querySelectorAll('.billing-price');
+            const texts = document.querySelectorAll('.billing-text');
+            const isAnnual = knob.classList.contains('translate-x-7');
+
+            if (isAnnual) {
+                // Switch to Monthly
+                knob.classList.remove('translate-x-7');
+                prices.forEach(p => p.textContent = p.dataset.monthly);
+                texts.forEach(t => t.textContent = '* Cobrado mensalmente');
+            } else {
+                // Switch to Annual
+                knob.classList.add('translate-x-7');
+                prices.forEach(p => p.textContent = p.dataset.annual);
+                texts.forEach(t => t.textContent = '* Cobrado anualmente');
+            }
         });
     </script>
 </body>
