@@ -755,18 +755,20 @@
                 </p>
 
                 <!-- Billing Toggle -->
-                <div class="mt-8 flex items-center justify-center gap-4">
-                    <span class="text-slate-400 font-medium">Mensal</span>
+                <div
+                    class="mt-8 flex items-center justify-center gap-6 p-2 bg-slate-800/50 rounded-2xl border border-slate-700 w-fit mx-auto">
+                    <span id="label-monthly" class="text-green-500 font-bold transition-all duration-300">Mensal</span>
                     <button id="billing-toggle"
-                        class="relative w-14 h-7 bg-slate-700 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
-                        <div class="absolute top-1 left-1 w-5 h-5 bg-green-500 rounded-full transition-transform duration-200"
+                        class="relative w-16 h-8 bg-slate-700 rounded-full transition-all duration-300 focus:outline-none hover:ring-2 hover:ring-green-500/50 group">
+                        <div class="absolute top-1 left-1 w-6 h-6 bg-slate-400 group-hover:bg-white rounded-full transition-all duration-300 shadow-lg"
                             id="toggle-knob"></div>
                     </button>
-                    <div class="flex items-center gap-2">
-                        <span class="text-slate-400 font-medium">Anual</span>
+                    <div class="flex items-center gap-3">
+                        <span id="label-annual"
+                            class="text-slate-500 font-medium transition-all duration-300">Anual</span>
                         <span
-                            class="bg-green-500/10 text-green-400 text-xs font-bold px-2 py-1 rounded-full border border-green-500/20">2
-                            Meses Grátis</span>
+                            class="bg-green-500/10 text-green-400 text-[10px] font-black px-2 py-1 rounded-md border border-green-500/20 uppercase tracking-tighter">Economize
+                            20%</span>
                     </div>
                 </div>
             </div>
@@ -1229,23 +1231,63 @@
         });
 
         // Billing Toggle Logic
-        document.getElementById('billing-toggle').addEventListener('click', function () {
-            const knob = document.getElementById('toggle-knob');
-            const prices = document.querySelectorAll('.billing-price');
-            const texts = document.querySelectorAll('.billing-text');
-            const isAnnual = knob.classList.contains('translate-x-7');
+        const billingToggle = document.getElementById('billing-toggle');
+        const knob = document.getElementById('toggle-knob');
+        const labelMonthly = document.getElementById('label-monthly');
+        const labelAnnual = document.getElementById('label-annual');
+        const prices = document.querySelectorAll('.billing-price');
+        const texts = document.querySelectorAll('.billing-text');
+
+        billingToggle.addEventListener('click', function () {
+            const isAnnual = knob.classList.contains('translate-x-8');
 
             if (isAnnual) {
                 // Switch to Monthly
-                knob.classList.remove('translate-x-7');
-                prices.forEach(p => p.textContent = p.dataset.monthly);
-                texts.forEach(t => t.textContent = '* Cobrado mensalmente');
+                knob.classList.remove('translate-x-8');
+                knob.classList.replace('bg-green-500', 'bg-slate-400');
+                billingToggle.classList.remove('bg-green-600/20', 'ring-2', 'ring-green-500/50');
+
+                labelMonthly.classList.add('text-green-500', 'font-bold');
+                labelMonthly.classList.remove('text-slate-500', 'font-medium');
+                labelAnnual.classList.add('text-slate-500', 'font-medium');
+                labelAnnual.classList.remove('text-green-500', 'font-bold');
+
+                updatePrices('monthly');
             } else {
                 // Switch to Annual
-                knob.classList.add('translate-x-7');
-                prices.forEach(p => p.textContent = p.dataset.annual);
-                texts.forEach(t => t.textContent = '* Cobrado anualmente');
+                knob.classList.add('translate-x-8');
+                knob.classList.replace('bg-slate-400', 'bg-green-500');
+                billingToggle.classList.add('bg-green-600/20', 'ring-2', 'ring-green-500/50');
+
+                labelAnnual.classList.add('text-green-500', 'font-bold');
+                labelAnnual.classList.remove('text-slate-500', 'font-medium');
+                labelMonthly.classList.add('text-slate-500', 'font-medium');
+                labelMonthly.classList.remove('text-green-500', 'font-bold');
+
+                updatePrices('annual');
             }
+        });
+
+        function updatePrices(type) {
+            prices.forEach((p, index) => {
+                // Animation: shrink and fade out
+                p.style.transform = 'scale(0.8)';
+                p.style.opacity = '0';
+
+                setTimeout(() => {
+                    p.textContent = type === 'monthly' ? p.dataset.monthly : p.dataset.annual;
+                    texts[index].textContent = type === 'monthly' ? '* Cobrado mensalmente' : '* Cobrado anualmente';
+
+                    // Animation: expand and fade in
+                    p.style.transform = 'scale(1)';
+                    p.style.opacity = '1';
+                }, 150);
+            });
+        }
+
+        // Add CSS transition to prices via JS for simplicity
+        prices.forEach(p => {
+            p.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
         });
     </script>
 </body>
